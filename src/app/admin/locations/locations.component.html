@@ -1,1 +1,5 @@
-<p>locations works!</p>
+
+<app-post-modal (onRefreshTable)="refreshTable()" (onAddLocation)="addLocation($event)" type="location"  title="Add Location"></app-post-modal>
+
+<app-table (onDelete)="deleteLocation($event)" [data]="data" type="location"></app-table>
+

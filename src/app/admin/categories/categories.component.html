@@ -1,1 +1,6 @@
-<p>categories works!</p>
+<app-post-modal (onRefreshTable)="refreshTable()" (onAddCategory)="addCategory($event)" type="category" title="Create Category"></app-post-modal>
+
+<app-table (onDelete)="deleteCategory($event)" [data]="category" ></app-table>
+
+
+

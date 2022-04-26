@@ -1,1 +1,3 @@
-<p>customer works!</p>
+<app-post-modal (onRefreshTable)="refreshTable()" (onAddCustomer)="addCustomer($event)" type="customer"  title="Add Customer Manually"></app-post-modal>
+
+<app-table [data]="data" ></app-table>

@@ -1,8 +1,9 @@
 import { HttpClientModule } from '@angular/common/http';
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-import { AdminRoutingModule } from './admin-routing.module';
-import { AppRoutingModule } from './app-routing.module';
+import { AdminRoutingModule } from './routes/admin-routing.module';
+import { AdminModule } from './admin/admin.module';
+import { StoreFrontRoutingModule } from './routes/storefront-routing.module';
 import { AppComponent } from './app.component';
 import { LayoutModule } from './layout/layout.module';
 import { StoreFrontModule } from './store-front/store-front.module';
@@ -13,9 +14,10 @@ import { StoreFrontModule } from './store-front/store-front.module';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule,
+    StoreFrontRoutingModule,
     AdminRoutingModule,
     LayoutModule,
+    AdminModule,
     StoreFrontModule,
     HttpClientModule
   ],

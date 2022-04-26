@@ -1,1 +1,7 @@
-<p>products works!</p>
+
+<app-post-modal (onRefreshTable)="refreshTable()" (onAddProduct)="addProduct($event)" [category]="category" type="product"  title="Create Product"></app-post-modal>
+
+
+<app-table (onDelete)="deleteProduct($event)" [data]="products" ></app-table>
+
+

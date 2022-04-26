@@ -5,6 +5,9 @@ import { LocationsComponent } from './locations/locations.component';
 import { SalesComponent } from './sales/sales.component';
 import { CategoriesComponent } from './categories/categories.component';
 import { ProductsComponent } from './products/products.component';
+import { TablesModule } from '../tables/tables.module';
+import { ModalsModule } from '../modals/modals.module';
+
 
 
 
@@ -14,10 +17,12 @@ import { ProductsComponent } from './products/products.component';
     LocationsComponent,
     SalesComponent,
     CategoriesComponent,
-    ProductsComponent
+    ProductsComponent,
   ],
   imports: [
-    CommonModule
+    CommonModule,
+    TablesModule,
+    ModalsModule
   ]
 })
 export class AdminModule { }
