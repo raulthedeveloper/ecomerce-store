@@ -1,0 +1,15 @@
+<h2 class="">Shop By Category</h2>
+<div  class="flex justify-center flex-wrap">
+  <div *ngFor="let item of categories;">
+    <a [routerLink]="[ item.id]">
+      <div class="text-center m-2">
+        <img class="h-32 w-32 m-3 rounded-full" src="{{item.image}}" alt="{{item.name}}">
+        <span >{{item.name}}</span>
+      </div>
+    </a>
+  </div>
+ 
+    
+  
+    
+  </div>
