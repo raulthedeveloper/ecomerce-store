@@ -18,8 +18,8 @@ export class CartServiceService {
     if(!this.checkforDuplicates(item)){
       item.total = Number(item.price);
       this.cartData.push(item)
-
       this.copyTo()
+      
     }
     else{
       // This is where we add to the quantity

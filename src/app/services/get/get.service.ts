@@ -25,6 +25,10 @@ export class GetService {
     
   }
 
+  getStore():Observable<any[]>{
+    return this.http.get<any[]>(url.apiUrlStore);
+  }
+
   getProductById(id:number):Observable<Product>{
     return this.http.get<Product>(`${url.apiUrlProducts}/${id}`);
   }

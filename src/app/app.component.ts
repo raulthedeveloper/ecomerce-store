@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { CartServiceService } from './services/cart-service.service';
 
 @Component({
   selector: 'app-root',
@@ -7,4 +8,11 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'ecommerce-store';
+
+  constructor(private cartService:CartServiceService){}
+
+  ngOnInit(){
+
+    this.cartService.loadCartData();
+  }
 }
