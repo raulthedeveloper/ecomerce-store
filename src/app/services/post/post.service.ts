@@ -27,7 +27,6 @@ export class PostService {
   }
 
   addProduct(product: Product):Observable<Product>{
-
     return this.http.post<Product>(url.apiUrlProducts, product, httpOptions)
   }
 

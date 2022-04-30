@@ -10,6 +10,7 @@ import { LayoutModule } from '../layout/layout.module';
 import { StoreLocationsComponent } from './store-locations/store-locations.component';
 import { RouterModule } from '@angular/router';
 import { FormsModule } from '@angular/forms';
+import { StoreCategoryComponent } from './store-category/store-category.component';
 
 
 
@@ -22,6 +23,7 @@ import { FormsModule } from '@angular/forms';
     ProductDetailComponent,
     CategoriesComponent,
     StoreLocationsComponent,
+    StoreCategoryComponent,
   ],
   imports: [
     CommonModule,

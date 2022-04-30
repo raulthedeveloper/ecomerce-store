@@ -14,8 +14,8 @@ import { StoreFrontModule } from './store-front/store-front.module';
   ],
   imports: [
     BrowserModule,
-    StoreFrontRoutingModule,
     AdminRoutingModule,
+    StoreFrontRoutingModule,
     LayoutModule,
     AdminModule,
     StoreFrontModule,
