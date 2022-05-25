@@ -1,8 +1,8 @@
 
 import { Injectable } from '@angular/core';
-import {Observable,of} from 'rxjs';
+import {first, Observable,of} from 'rxjs';
 import {HttpClient} from '@angular/common/http'
-import {Product,Category, Customer, Sale, Location,  ProductByCat, UnitedStates } from "../../DataInterfaces";
+import {Product,Category, Customer, Sale, Location,  ProductByCat, UnitedStates, CustomerInfo } from "../../DataInterfaces";
 import { environment } from 'src/environments/environment';
 import { url } from '../ServiceUtils';
 import { Router } from '@angular/router';
@@ -70,6 +70,11 @@ export class GetService {
    
       return this.http.get<Customer[]>(url.apiUrlCustomers);
    
+  }
+
+  getCustomerId(firstName:string,lastName:string,email:string):Observable<CustomerInfo>{
+
+    return this.http.get<CustomerInfo>(`${url.apiUrlGetCustomerId}firstName=${firstName}&lastName=${lastName}&email=${email}`)
   }
 
 

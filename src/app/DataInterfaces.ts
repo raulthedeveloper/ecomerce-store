@@ -14,6 +14,8 @@ export interface UnitedStates{
     stateName:string
 }
 
+
+
 export interface Category {
     id?:number,
     name:string | undefined,
@@ -31,7 +33,23 @@ export interface Sale {
 export interface Customer{
      id?:number | undefined,
     first_name:string  | undefined,
-    last_name:string  | undefined
+    last_name:string  | undefined,
+    
+}
+
+export interface CustomerInfo{
+    id?:number | undefined,
+    first_name:string,
+    last_name:string,
+    password:string
+}
+
+export interface Address{
+    id?:number,
+    custId:number,
+    streetAddress:string,
+    state:string,
+    zipCode:string
 }
 
 export interface Cart {

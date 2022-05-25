@@ -1,1 +1,17 @@
-<p>store-locations works!</p>
+<app-page-title title="Locations"></app-page-title>
+
+<mat-list>
+    <mat-list-item *ngFor="let location of locations; last as last">
+        <div class="flex flex-wrap justify-around">
+            <h4 mat-line>{{location.address}}</h4>
+            <h4 mat-line class="demo-2"> {{location.city}} </h4>
+            <h4 mat-line class="demo-2"> {{location.state}} </h4>
+            <h4 mat-line class="demo-2"> {{location.postalCode}} </h4>
+        </div>
+       
+       <mat-divider [inset]="true" *ngIf="!last"></mat-divider>
+    </mat-list-item>
+    <mat-divider></mat-divider>
+    
+ </mat-list>
+

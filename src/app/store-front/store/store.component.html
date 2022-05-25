@@ -1,3 +1,5 @@
+<app-page-title title="Store"></app-page-title>
+
 <app-mini-category-selector [categories]="category"></app-mini-category-selector>
 
   <app-store-ui  *ngFor="let item of products; "   [products]="item" title="{{item.name}}"></app-store-ui>

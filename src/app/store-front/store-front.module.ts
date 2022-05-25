@@ -8,9 +8,15 @@ import { ProductDetailComponent } from './product-detail/product-detail.componen
 import { LayoutModule } from '../layout/layout.module';
 import { StoreLocationsComponent } from './store-locations/store-locations.component';
 import { RouterModule } from '@angular/router';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { StoreCategoryComponent } from './store-category/store-category.component';
 import { CustomerLoginComponent } from './customer-login/customer-login.component';
+import { ExploreMoreComponent } from './explore-more/explore-more.component';
+import {MatDividerModule} from '@angular/material/divider';
+import {MatListModule} from '@angular/material/list';
+
+
+
 
 
 
@@ -24,12 +30,17 @@ import { CustomerLoginComponent } from './customer-login/customer-login.componen
     StoreLocationsComponent,
     StoreCategoryComponent,
     CustomerLoginComponent,
+    ExploreMoreComponent,
   ],
   imports: [
     CommonModule,
     LayoutModule,
     RouterModule,
-    FormsModule
+    FormsModule,
+    ReactiveFormsModule,
+    MatDividerModule,
+    MatListModule
+    
   ]
 })
 export class StoreFrontModule { }

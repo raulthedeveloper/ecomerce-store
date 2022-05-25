@@ -12,6 +12,8 @@ import { CategoryCardComponent } from './category-card/category-card.component';
 import { CategoryRowComponent } from './category-row/category-row.component';
 import { MiniCategorySelectorComponent } from './mini-category-selector/mini-category-selector.component';
 import { ProductCardComponent } from './product-card/product-card.component';
+import { PageTitleComponent } from './page-title/page-title.component';
+import { CustomButtonComponent } from './custom-button/custom-button.component';
 
 
 
@@ -27,7 +29,9 @@ import { ProductCardComponent } from './product-card/product-card.component';
     CategoryCardComponent,
     CategoryRowComponent,
     MiniCategorySelectorComponent,
-    ProductCardComponent
+    ProductCardComponent,
+    PageTitleComponent,
+    CustomButtonComponent,
   ],
   imports: [
     CommonModule,
@@ -44,6 +48,8 @@ import { ProductCardComponent } from './product-card/product-card.component';
     CategoryCardComponent,
     CategoryRowComponent,
     MiniCategorySelectorComponent,
+    PageTitleComponent,
+    CustomButtonComponent
   ]
 })
 export class LayoutModule { }

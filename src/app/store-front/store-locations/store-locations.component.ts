@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { GetService } from 'src/app/services/get/get.service';
+import { Location } from 'src/app/DataInterfaces';
 
 @Component({
   selector: 'app-store-locations',
@@ -7,9 +9,14 @@ import { Component, OnInit } from '@angular/core';
 })
 export class StoreLocationsComponent implements OnInit {
 
-  constructor() { }
+  public locations:Location[] | undefined
+
+  constructor(private getService:GetService) { }
 
   ngOnInit(): void {
+    this.getService.getLocations().subscribe((locations) =>(this.locations = locations))
+
   }
+
 
 }

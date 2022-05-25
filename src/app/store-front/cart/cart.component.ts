@@ -11,7 +11,10 @@ import {ActivatedRoute, Router} from '@angular/router';
 })
 export class CartComponent implements OnInit {
    cartContents:any
+  //  decrementSvg:string = '<svg class="fill-current text-gray-600 w-3" viewBox="0 0 448 512"><path d="M416 208H32c-17.67 0-32 14.33-32 32v32c0 17.67 14.33 32 32 32h384c17.67 0 32-14.33 32-32v-32c0-17.67-14.33-32-32-32z"/> </svg>'
 
+  decrementLabel:string = "-"
+  incrementLabel:string = "+"
 
   constructor(private cartService:CartServiceService, private postService:PostService,private router: Router, private route: ActivatedRoute) { }
 
@@ -45,19 +48,45 @@ export class CartComponent implements OnInit {
 
   }
 
-  decrementQuantity(id:number){
+  getItemQuantity(index:number):boolean{
+    if (this.cartContents[index].quantity == 1){
+      return true
+    }
+    else{
+      return false
+    }
+  }
+
+  decrementQuantity(id:number):void{
     let index = this.cartContents.findIndex((o:any) => {
       return id == o.prodId ;
      })
+
      if(this.cartContents[index].quantity > 0){
         this.cartContents[index].quantity -= 1
+  
      }
 
-     this.singleItemTotal(this.cartContents[index],this.cartContents[index].quantity,this.cartContents[index].price)
-    this.cartService.updateFromCart(this.cartContents);
+      console.log(this.cartContents[index].quantity)
+
+      this.disableDecrementButton(index)
+
+
+      
+
+      this.singleItemTotal(this.cartContents[index],this.cartContents[index].quantity,this.cartContents[index].price)
+        this.cartService.updateFromCart(this.cartContents);
+
+     
   }
 
-  removeItem(id:number){
+  disableDecrementButton(index:number):void{
+    if(this.cartContents[index].quantity == 0){
+      console.log(`Item with id:${index} button is disabled`)
+    }
+  }
+
+  removeItem(id:number):void{
     let total = this.grossTotal();
     let index = this.cartContents.findIndex((o:any) => {
       return id == o.prodId ;

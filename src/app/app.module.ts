@@ -3,10 +3,13 @@ import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { AdminRoutingModule } from './routes/admin-routing.module';
 import { AdminModule } from './admin/admin.module';
+import { CustomerDashboardRoutingModule } from './routes/customer-dashboard-routing.module';
 import { StoreFrontRoutingModule } from './routes/storefront-routing.module';
 import { AppComponent } from './app.component';
 import { LayoutModule } from './layout/layout.module';
 import { StoreFrontModule } from './store-front/store-front.module';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+
 
 @NgModule({
   declarations: [
@@ -16,10 +19,12 @@ import { StoreFrontModule } from './store-front/store-front.module';
     BrowserModule,
     AdminRoutingModule,
     StoreFrontRoutingModule,
+    CustomerDashboardRoutingModule,
     LayoutModule,
     AdminModule,
     StoreFrontModule,
-    HttpClientModule
+    HttpClientModule,
+    BrowserAnimationsModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
